@@ -5,41 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
   </head>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      /* font-family: sans-serif; */
-      font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
-    }
-    .otp-wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 90vh;
-    }
-    .otp {
-      display: flex;
-      gap: 10px;
-      /* justify-content: center; */
-      padding: 10px 0px;
-    }
-    .otp input {
-      width: 40px;
-      height: 40px;
-      border-radius: 8px;
-      font-size: 25px;
-      border: 1px solid black;
-      text-align: center;
-    }
-    input::-webkit-outer-spin-button,
-    input::-webkit-inner-spin-button {
-      -webkit-appearance: none;
-      margin: 0;
-    }
-  </style>
+  <link rel="stylesheet" href="./style.css" />
   <body>
     <div class="otp-wrapper">
       <div>
@@ -55,16 +21,5 @@
       </div>
     </div>
   </body>
-  <script>
-    const inputContainer = document.querySelector(".otp");
-    inputContainer.firstElementChild.focus();
-    inputContainer.addEventListener("keyup", (e) => {
-      if (event.key === "Backspace" || event.key === "Delete") {
-        e.target.previousElementSibling?.focus();
-      }
-      if (e.target.value != "" && !isNaN(Number(e.target.value))) {
-        e.target.nextElementSibling?.focus();
-      }
-    });
-  </script>
+  <script src="./script.js"></script>
 </html>
